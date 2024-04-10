@@ -42,7 +42,15 @@ public class DEAAutomat {
                 }
             }
         }
-        System.out.println("fertig");
+
+        if (state == DEAStates.STATE_END1) {
+            System.out.println("Automat hat Endpunkt 1 erreicht!");
+        } else if (state == DEAStates.STATE_END2) {
+            System.out.println("Automat hat Endpunkt 2 erreicht!");
+        } else {
+            System.out.println("Automat hat keinen Endpunkt erreicht!");
+        }
+
         return state == DEAStates.STATE_END1 || state == DEAStates.STATE_END2;
     }
 }
